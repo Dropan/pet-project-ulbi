@@ -9,5 +9,7 @@
     "Главная": "Main",
     "О сайте": "About us",
     "Аббревиатура": "En",
-    "Войти": "Login"
+    "Войти": "Login",
+    "Введите логин": "Enter your username",
+    "Введите пароль": "Enter your password"
 }
