@@ -23,15 +23,11 @@ export const Counter = () => {
       <Button
         data-testid="increment-btn"
         onClick={increment}
-      >
-        inc
-      </Button>
+      />
       <Button
         data-testid="decrement-btn"
         onClick={decrement}
-      >
-        dec
-      </Button>
+      />
     </div>
   );
 };
