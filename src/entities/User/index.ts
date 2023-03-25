@@ -1,4 +1,8 @@
 export {
+  getUserAthData,
+} from './model/selectors/getUserAthData/getUserAthData';
+
+export {
   userReducer,
   userActions,
 } from './model/slice/userSlice';
