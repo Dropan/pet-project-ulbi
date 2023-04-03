@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Алексей",
+    "lastname": "Новиков",
+    "age": 27,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Bor",
+    "username": "admin",
+    "avatar": ""
+   }
 }
