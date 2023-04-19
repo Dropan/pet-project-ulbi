@@ -38,4 +38,5 @@ export interface ThunkExtraAgr {
 export interface ThunkConfig<T> {
   rejectValue: T;
   extra: ThunkExtraAgr;
+  state: StateSchema;
 }

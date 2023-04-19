@@ -1,13 +1,6 @@
-import axios from 'axios';
-import { Dispatch } from '@reduxjs/toolkit';
-import { StateSchema } from 'app/providers/StoreProvider';
 import { userActions } from 'entities/User';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
 import { loginByUserName } from './loginByUserName';
-
-jest.mock('axios');
-
-const mockedAxios = jest.mocked(axios, true);
 
 describe('loginByUserName.test', () => {
   // let dispatch: Dispatch;

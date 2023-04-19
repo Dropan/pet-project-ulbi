@@ -3,5 +3,12 @@
   "Профиль": "Profile",
   "Редактировать": "Edit",
   "Ваше имя": "Your name",
-  "Ваше фамилия": "Your lastname"
+  "Ваше фамилия": "Your lastname",
+  "Произошла ошибка при загрузке профиля": "An error occurred while loading the profile",
+  "Отменить": "Cancel",
+  "Сохранить": "Save",
+  "Ваш возраст": "Your age",
+  "Город": "City",
+  "Введите имя пользователя": "Enter the user name",
+  "Введите ссылку на аватар": "Enter the link to the avatar"
 }
