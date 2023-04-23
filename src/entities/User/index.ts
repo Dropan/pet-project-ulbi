@@ -1,6 +1,5 @@
-export {
-  getUserAthData,
-} from './model/selectors/getUserAthData/getUserAthData';
+export { getUserAthData } from './model/selectors/getUserAthData/getUserAthData';
+export { getUserInited } from './model/selectors/getUserInited/getUserInited';
 
 export {
   userReducer,
