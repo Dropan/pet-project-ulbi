@@ -107,13 +107,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://www.crushpixel.com/big-static19/preview4/man-avatar-icon-vector-flat-3214817.jpg"
     },
     {
       "id": "2",
       "username": "admin",
       "password": "user",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://www.soscanhelp.com/hubfs/Dark%20Web%20Hacker%20Blue%20Glow.jpeg"
     }
   ],
   "profile": {
