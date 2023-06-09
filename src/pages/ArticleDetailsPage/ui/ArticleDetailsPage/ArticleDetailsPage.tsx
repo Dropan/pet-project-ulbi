@@ -1,17 +1,21 @@
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { ArticleDetails } from 'entities/Article';
 import { Text } from 'shared/ui/Text/Text';
 import { CommentList } from 'entities/Comment';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useSelector } from 'react-redux';
-import {
-  fetchCommentsByArticleId,
-} from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { AddCommentForm } from 'features/addCommentForm';
+import {
+  addCommentForArcticles,
+} from '../../model/services/addCommentForArcticle/addCommentForArcticles';
+import {
+  fetchCommentsByArticleId,
+} from '../../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import {
   articleDetailsCommentsReducer,
   getArticleDetailsComments,
@@ -37,6 +41,10 @@ export const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   const comments = useSelector(getArticleDetailsComments.selectAll);
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading);
 
+  const onSendComment = useCallback((text: string) => {
+    dispatch(addCommentForArcticles(text));
+  }, [dispatch]);
+
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id));
   });
@@ -54,6 +62,7 @@ export const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
       <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetails id={id} />
         <Text className={cls.commentTitle} title={t('Комментарии')} />
+        <AddCommentForm onSendComment={onSendComment} />
         <CommentList
           isLoading={commentsIsLoading}
           comments={comments}

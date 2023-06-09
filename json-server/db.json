@@ -105,27 +105,41 @@
   "users": [
     {
       "id": "1",
-      "username": "admin",
+      "userName": "admin",
       "password": "123",
       "role": "ADMIN",
       "avatar": "https://www.crushpixel.com/big-static19/preview4/man-avatar-icon-vector-flat-3214817.jpg"
     },
     {
       "id": "2",
-      "username": "admin",
+      "userName": "admin",
       "password": "user",
       "role": "USER",
       "avatar": "https://www.soscanhelp.com/hubfs/Dark%20Web%20Hacker%20Blue%20Glow.jpeg"
     }
   ],
-  "profile": {
-    "first": "Алексей",
-    "lastname": "Новиков",
-    "age": 27,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Bor",
-    "username": "admin",
-    "avatar": "https://www.crushpixel.com/big-static19/preview4/man-avatar-icon-vector-flat-3214817.jpg"
-   }
+  "profile": [
+    {
+      "id": "1", 
+      "first": "Алексей",
+      "lastname": "Новиков",
+      "age": 27,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Bor",
+      "userName": "admin",
+      "avatar": "https://www.crushpixel.com/big-static19/preview4/man-avatar-icon-vector-flat-3214817.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Пётр",
+      "lastname": "Белькович",
+      "age": 42,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "userName": "user",
+      "avatar": "https://www.crushpixel.com/big-static19/preview4/man-avatar-icon-vector-flat-3214817.jpg"
+    }
+  ]
 }
