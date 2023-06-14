@@ -12,6 +12,7 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { AddCommentForm } from 'features/addCommentForm';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { Page } from 'shared/ui/Page/Page';
 import {
   addCommentForArcticles,
 } from '../../model/services/addCommentForArcticle/addCommentForArcticles';
@@ -58,9 +59,9 @@ export const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
   if (!id) {
     return (
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         {t('Статья не найдена')}
-      </div>
+      </Page>
     );
   }
 
@@ -69,7 +70,7 @@ export const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
       <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
         {t('Назад')}
       </Button>
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetails id={id} />
         <Text className={cls.commentTitle} title={t('Комментарии')} />
         <AddCommentForm onSendComment={onSendComment} />
@@ -77,7 +78,7 @@ export const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
           isLoading={commentsIsLoading}
           comments={comments}
         />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   );
 };
