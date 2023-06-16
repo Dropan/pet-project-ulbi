@@ -37,7 +37,7 @@ export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
   } = props;
   const { t } = useTranslation('article-details');
 
-  const onClick = (newView: ArticleView) => () => () => {
+  const onClick = (newView: ArticleView) => () => {
     onViewClick?.(newView);
   };
 
