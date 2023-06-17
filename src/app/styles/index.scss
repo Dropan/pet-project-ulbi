@@ -17,3 +17,18 @@ body {
 .content-page {
   display: flex;
 }
+
+*::-webkit-scrollbar {
+  width: 12px; // Ширина скроллбара
+  height: 8px; // Высота скроллбара
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--card-bg); // Цвет дорожки
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--inverted-primary-color); // Цвет плашки
+  border-radius: 20px; // Загругление плашки
+  border: 2px solid var(--primary-color); // padding вокруг плашки
+}
