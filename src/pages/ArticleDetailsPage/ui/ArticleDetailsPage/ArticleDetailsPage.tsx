@@ -16,6 +16,7 @@ import { Page } from 'widgets/Page/Page';
 import {
   getArticleRecomendationsIsLoading,
 } from 'pages/ArticleDetailsPage/model/selectors/recomendations';
+import { VStack } from 'shared/ui/Stack';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { fetchArticleRecomendations } from '../../model/services/fetchArticleRecomendations/fetchArticleRecomendations';
 import {
@@ -74,30 +75,32 @@ export const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        <ArticleDetailsPageHeader />
-        <ArticleDetails id={id} />
-        <Text
-          size={TextSize.L}
-          className={cls.commentTitle}
-          title={t('Рекомендуем')}
-        />
-        <ArticleList
-          className={cls.recomendations}
-          articles={recomendations}
-          isLoading={recomendationsIsLoading}
-          // eslint-disable-next-line i18next/no-literal-string
-          target="_blank"
-        />
-        <Text
-          size={TextSize.L}
-          className={cls.commentTitle}
-          title={t('Комментарии')}
-        />
-        <AddCommentForm onSendComment={onSendComment} />
-        <CommentList
-          isLoading={commentsIsLoading}
-          comments={comments}
-        />
+        <VStack gap="16" max>
+          <ArticleDetailsPageHeader />
+          <ArticleDetails id={id} />
+          <Text
+            size={TextSize.L}
+            className={cls.commentTitle}
+            title={t('Рекомендуем')}
+          />
+          <ArticleList
+            className={cls.recomendations}
+            articles={recomendations}
+            isLoading={recomendationsIsLoading}
+            // eslint-disable-next-line i18next/no-literal-string
+            target="_blank"
+          />
+          <Text
+            size={TextSize.L}
+            className={cls.commentTitle}
+            title={t('Комментарии')}
+          />
+          <AddCommentForm onSendComment={onSendComment} />
+          <CommentList
+            isLoading={commentsIsLoading}
+            comments={comments}
+          />
+        </VStack>
       </Page>
     </DynamicModuleLoader>
   );
