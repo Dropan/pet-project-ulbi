@@ -37,6 +37,7 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
       defaultValue={t('Укажите валюту')}
       label={t('Укажите валюту')}
       onChange={onChangeHandler}
+      direction="top right"
     />
   );
 });
