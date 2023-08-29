@@ -39,5 +39,7 @@
     "Рекомендуем": "Recommend",
     "Редактировать": "Edit",
     "Создать статью": "Create article",
-    "Профиль пользователя": "User profile"
+    "Профиль пользователя": "User profile",
+    "Ошибка при загрузке статей": "Error loading articles",
+    "Профиль не найден": "Profile not found"
 }
