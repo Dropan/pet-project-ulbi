@@ -13,11 +13,7 @@ interface ProfilePageProps {
 const ProfilePage = (props: ProfilePageProps) => {
   const { className } = props;
   const { id } = useParams<{ id: string }>();
-  const { t } = useTranslation();
-
-  if (!id) {
-    return <Text text={t('Профиль не найден')} />;
-  }
+  // const { t } = useTranslation();
 
   return (
     <Page className={classNames('', {}, [className])}>
