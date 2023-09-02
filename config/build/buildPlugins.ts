@@ -3,6 +3,7 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import CircularDependencyPlugin from 'circular-dependency-plugin';
 import { BuildOptions } from './types/config';
 
 export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance[] {
@@ -22,6 +23,10 @@ export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance
       __IS_DEV__: JSON.stringify(isDev),
       __API__: JSON.stringify(apiUrl),
       __PROJECT__: JSON.stringify(project),
+    }),
+    new CircularDependencyPlugin({
+      exclude: /node-modules/,
+      failOnError: true,
     }),
   ];
 
