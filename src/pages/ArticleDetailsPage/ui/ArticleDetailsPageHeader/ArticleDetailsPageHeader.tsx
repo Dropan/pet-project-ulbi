@@ -30,14 +30,14 @@ export const ArticleDetailsPageHeader = (props: ArticleDetailsPageHeaderProps) =
   return (
     <HStack max justify="between" className={classNames('', {}, [className])}>
       <Button theme={ButtonTheme.OUTLINE} onClick={onBackToList}>
-        {t('Назад')}
+        {t<string>('Назад')}
       </Button>
       {canEdit && (
         <Button
           theme={ButtonTheme.OUTLINE}
           onClick={onEditArticle}
         >
-          {t('Редактировать')}
+          {t<string>('Редактировать')}
         </Button>
       )}
     </HStack>

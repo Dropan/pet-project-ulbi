@@ -2,12 +2,15 @@ export {
   ArticleDetails,
 } from './ui/ArticleDetails/ArticleDetails';
 
-export {
+export type {
   Article,
+} from './model/types/article';
+
+export {
   ArticleView,
   ArticleSortField,
   ArticleType,
-} from './model/types/article';
+} from './model/consts/articleConsts';
 
 export type {
   ArticleDetailsSchema,
