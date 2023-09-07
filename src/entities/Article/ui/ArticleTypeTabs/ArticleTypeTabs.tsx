@@ -1,6 +1,6 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo, useCallback, useMemo } from 'react';
 import { t } from 'i18next';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { TabItem, Tabs } from '@/shared/ui/Tabs/Tabs';
 import { ArticleType } from '@/entities/Article/model/consts/articleConsts';
 

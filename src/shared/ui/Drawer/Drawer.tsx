@@ -1,7 +1,7 @@
-import { useTheme } from '@/app/providers/ThemeProvider';
 import {
   ReactNode, memo, useCallback, useEffect,
 } from 'react';
+import { useTheme } from '@/app/providers/ThemeProvider';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAnimationLibs } from '@/shared/lib/components/AnimationProvider';
 import { Overlay } from '../Overlay/Overlay';

@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
-import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { useSelector } from 'react-redux';
+import { AppLink } from '@/shared/ui/AppLink/AppLink';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserAthData } from '@/entities/User';
 import cls from './SidebarItem.module.scss';
 import { SidebarItemType } from '../../model/types/sidebar';
