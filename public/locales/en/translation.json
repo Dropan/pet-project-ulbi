@@ -43,5 +43,7 @@
     "Ошибка при загрузке статей": "Error loading articles",
     "Профиль не найден": "Profile not found",
     "Админ панель": "Admin panel",
-    "У вас нет доступа к этой странице": "You don't have access to this page"
+    "У вас нет доступа к этой странице": "You don't have access to this page",
+    "Ваш отзыв": "Your feedback",
+    "Закрыть": "Close"
 }
