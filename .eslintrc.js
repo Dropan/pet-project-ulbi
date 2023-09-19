@@ -76,6 +76,7 @@ module.exports = {
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
     'ulbi-tv-plugin-test/path-checker': ['error', { alias: '@' }],
+    'ulbi-tv-plugin-test/public-api-imports': ['error', { alias: '@' }],
   },
   globals: {
     __IS_DEV__: true,

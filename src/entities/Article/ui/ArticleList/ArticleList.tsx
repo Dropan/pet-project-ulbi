@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/shared/ui/Text/Text';
 // import { PAGE_ID } from '@/widgets/Page/Page';
-import { ArticleView } from '@/entities/Article/model/consts/articleConsts';
 import { Article } from '../../model/types/article';
 import cls from './ArticleList.module.scss';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
+import { ArticleView } from '../../model/consts/articleConsts';
 
 interface ArticleListProps {
   className?: string;
