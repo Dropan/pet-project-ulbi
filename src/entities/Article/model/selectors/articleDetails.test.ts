@@ -1,8 +1,6 @@
 import { StateSchema } from '@/app/providers/StoreProvider';
 import {
-  getArticleDetailsData,
-  getArticleDetailsError, // TODO: добить два тест-кейса
-  getArticleDetailsIsLoading, // TODO: добить два тест-кейса
+  getArticleDetailsData, // TODO: добить два тест-кейса
 } from './articleDetails';
 
 describe('getArticleDetailsData.test', () => {

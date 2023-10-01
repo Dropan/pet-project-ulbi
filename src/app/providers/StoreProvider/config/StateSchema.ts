@@ -10,9 +10,7 @@ import { UISchema } from '@/features/UI';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { ProfileSchema } from '@/features/editableProfileCard';
 import {
-  ArticleDetailsCommentsSchema,
   ArticleDetailsPageSchema,
-  ArticleDetailsRecomendationsSchema,
 } from '@/pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { rtkApi } from '@/shared/api/rtkApi';

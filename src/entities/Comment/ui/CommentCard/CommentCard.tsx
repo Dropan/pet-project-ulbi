@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect } from 'react';
+import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Avatar } from '@/shared/ui/Avatar';
 import { Text } from '@/shared/ui/Text';
