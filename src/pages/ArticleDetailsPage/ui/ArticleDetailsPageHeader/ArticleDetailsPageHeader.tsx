@@ -7,7 +7,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { getArticleDetailsData } from '@/entities/Article';
 import { HStack } from '@/shared/ui/Stack';
 import { getCanEditArticle } from '../../model/selectors/article';
-import { RoutePath } from '@/shared/const/router';
+import { getRouteArticles, getRouteArticlesEdit } from '@/shared/const/router';
 
 interface ArticleDetailsPageHeaderProps {
   className?: string;
@@ -20,12 +20,14 @@ export const ArticleDetailsPageHeader = (props: ArticleDetailsPageHeaderProps) =
   const article = useSelector(getArticleDetailsData);
 
   const onBackToList = useCallback(() => {
-    navigate(RoutePath.articles);
+    navigate(getRouteArticles());
   }, [navigate]);
 
   const onEditArticle = useCallback(() => {
-    navigate(`${RoutePath.article_details}${article?.id}/edit`);
-  }, [article?.id, navigate]);
+    if (article) {
+      navigate(getRouteArticlesEdit(article?.id));
+    }
+  }, [article, navigate]);
 
   return (
     <HStack max justify="between" className={classNames('', {}, [className])}>
