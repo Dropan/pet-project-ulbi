@@ -8,6 +8,7 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb', 'plugin:i18next/recommended',
     'plugin:storybook/recommended',
+    'prettier',
   ],
   overrides: [{
     files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
@@ -30,10 +31,7 @@ module.exports = {
     'unused-imports',
   ],
   rules: {
-    'react/jsx-indent': [2, 2],
-    'react/jsx-indent-props': [2, 2],
     'unused-imports/no-unused-imports': 'error',
-    indent: [2, 2],
     'react/jsx-filename-extension': [2, {
       extensions: ['.js', '.jsx', 'tsx'],
     }],
@@ -92,6 +90,7 @@ module.exports = {
         testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
       },
     ],
+    'react/jsx-max-props-per-line': ['error', { maximum: 4 }]
   },
   globals: {
     __IS_DEV__: true,

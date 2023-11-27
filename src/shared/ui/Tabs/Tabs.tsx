@@ -16,16 +16,14 @@ interface TabsProps {
 }
 
 export const Tabs = (props: TabsProps) => {
-  const {
-    className,
-    tabs,
-    value,
-    onTabClick,
-  } = props;
+  const { className, tabs, value, onTabClick } = props;
 
-  const clickHandler = useCallback((tab: TabItem) => () => {
-    onTabClick(tab);
-  }, [onTabClick]);
+  const clickHandler = useCallback(
+    (tab: TabItem) => () => {
+      onTabClick(tab);
+    },
+    [onTabClick],
+  );
 
   return (
     <div className={classNames(cls.Tabs, {}, [className])}>

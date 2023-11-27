@@ -24,10 +24,7 @@ interface TestProviderProps {
 }
 
 export function TestProvider(props: TestProviderProps) {
-  const {
-    children,
-    options = {},
-  } = props;
+  const { children, options = {} } = props;
   const {
     route = '/',
     initialState,
@@ -40,9 +37,7 @@ export function TestProvider(props: TestProviderProps) {
       <StoreProvider asyncReducers={asyncReducers} initialState={initialState}>
         <I18nextProvider i18n={i18nForTests}>
           <ThemeProvider initialTheme={theme}>
-            <div className={`app ${theme}`}>
-              {children}
-            </div>
+            <div className={`app ${theme}`}>{children}</div>
           </ThemeProvider>
         </I18nextProvider>
       </StoreProvider>
@@ -50,6 +45,9 @@ export function TestProvider(props: TestProviderProps) {
   );
 }
 
-export function componentRender(component: ReactNode, options: componentRenderOptions = {}) {
+export function componentRender(
+  component: ReactNode,
+  options: componentRenderOptions = {},
+) {
   return render(<TestProvider options={options}>{component}</TestProvider>);
 }

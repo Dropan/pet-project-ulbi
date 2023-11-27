@@ -8,31 +8,30 @@ const recomendationsAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id,
 });
 
-export const getArticlesRecomendations = recomendationsAdapter.getSelectors<StateSchema>(
-  (state) => state.articleDetailsPage?.recomendations || recomendationsAdapter.getInitialState(),
-);
+export const getArticlesRecomendations =
+  recomendationsAdapter.getSelectors<StateSchema>(
+    (state) =>
+      state.articleDetailsPage?.recomendations ||
+      recomendationsAdapter.getInitialState(),
+  );
 
 const articleDetailsPageRecomendationsSlice = createSlice({
   name: 'articleDetailsCommentsSlice',
-  initialState: recomendationsAdapter.getInitialState<ArticleDetailsRecomendationsSchema>({
-    isLoading: false,
-    error: undefined,
-    ids: [],
-    entities: {},
-  }),
-  reducers: {
-
-  },
+  initialState:
+    recomendationsAdapter.getInitialState<ArticleDetailsRecomendationsSchema>({
+      isLoading: false,
+      error: undefined,
+      ids: [],
+      entities: {},
+    }),
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchArticleRecomendations.pending, (state) => {
         state.error = undefined;
         state.isLoading = true;
       })
-      .addCase(fetchArticleRecomendations.fulfilled, (
-        state,
-        action,
-      ) => {
+      .addCase(fetchArticleRecomendations.fulfilled, (state, action) => {
         state.isLoading = false;
         recomendationsAdapter.setAll(state, action.payload);
       })
@@ -43,6 +42,5 @@ const articleDetailsPageRecomendationsSlice = createSlice({
   },
 });
 
-export const {
-  reducer: articleDetailsPageRecomendationsReducer,
-} = articleDetailsPageRecomendationsSlice;
+export const { reducer: articleDetailsPageRecomendationsReducer } =
+  articleDetailsPageRecomendationsSlice;

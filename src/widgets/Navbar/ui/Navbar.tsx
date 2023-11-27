@@ -2,9 +2,7 @@
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import {
-  getUserAthData,
-} from '@/entities/User';
+import { getUserAthData } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUserName';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import { NotificationButton } from '@/features/notificationButton';
@@ -17,7 +15,7 @@ import cls from './Navbar.module.scss';
 import { getRouteArticlesCreate } from '@/shared/const/router';
 
 interface NavbarProps {
-    className?: string;
+  className?: string;
 }
 
 export const Navbar = memo(({ className }: NavbarProps) => {
@@ -36,15 +34,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   if (authData) {
     return (
       <header className={classNames(cls.Navbar, {}, [className])}>
-        <Text
-          className={cls.appName}
-          title="LOGO"
-          theme={TextTheme.INVERTED}
-        />
-        <AppLink
-          theme={AppLinkTheme.SECONDARY}
-          to={getRouteArticlesCreate()}
-        >
+        <Text className={cls.appName} title="LOGO" theme={TextTheme.INVERTED} />
+        <AppLink theme={AppLinkTheme.SECONDARY} to={getRouteArticlesCreate()}>
           {t('Создать статью')}
         </AppLink>
         <HStack gap="16" className={cls.actions}>
@@ -66,10 +57,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
       </Button>
       {/* eslint-disable-next-line i18next/no-literal-string */}
       {isAuthModal && (
-        <LoginModal
-          isOpen={isAuthModal}
-          onClose={onCloseModal}
-        />
+        <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
       )}
     </header>
   );

@@ -9,11 +9,12 @@ import { Avatar } from '@/shared/ui/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { AppLink } from '@/shared/ui/AppLink';
 import cls from './ArticleListItem.module.scss';
-import {
-  Article, ArticleTextBlock,
-} from '../../model/types/article';
+import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { ArticleBlockType, ArticleView } from '../../model/consts/articleConsts';
+import {
+  ArticleBlockType,
+  ArticleView,
+} from '../../model/consts/articleConsts';
 import { getRouteArticlesDetails } from '@/shared/const/router';
 import { AppImage } from '@/shared/ui/AppImage';
 import { Skeleton } from '@/shared/ui/Skeleton';
@@ -26,9 +27,7 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-  const {
-    className, article, view, target,
-  } = props;
+  const { className, article, view, target } = props;
   const { t } = useTranslation('article-details');
 
   const types = <Text text={article.type.join(', ')} className={cls.types} />;
@@ -64,13 +63,14 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             fallback={<Skeleton width="100%" height={250} />}
           />
           {textBlock && (
-            <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
+            <ArticleTextBlockComponent
+              block={textBlock}
+              className={cls.textBlock}
+            />
           )}
           <div className={cls.footer}>
             <AppLink target={target} to={getRouteArticlesDetails(article.id)}>
-              <Button theme={ButtonTheme.OUTLINE}>
-                {t('Читать далее')}
-              </Button>
+              <Button theme={ButtonTheme.OUTLINE}>{t('Читать далее')}</Button>
             </AppLink>
             {views}
           </div>

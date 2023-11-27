@@ -13,7 +13,9 @@ interface ArticleDetailsPageHeaderProps {
   className?: string;
 }
 
-export const ArticleDetailsPageHeader = (props: ArticleDetailsPageHeaderProps) => {
+export const ArticleDetailsPageHeader = (
+  props: ArticleDetailsPageHeaderProps,
+) => {
   const { className } = props;
   const navigate = useNavigate();
   const canEdit = useSelector(getCanEditArticle);
@@ -35,10 +37,7 @@ export const ArticleDetailsPageHeader = (props: ArticleDetailsPageHeaderProps) =
         {t<string>('Назад')}
       </Button>
       {canEdit && (
-        <Button
-          theme={ButtonTheme.OUTLINE}
-          onClick={onEditArticle}
-        >
+        <Button theme={ButtonTheme.OUTLINE} onClick={onEditArticle}>
           {t<string>('Редактировать')}
         </Button>
       )}

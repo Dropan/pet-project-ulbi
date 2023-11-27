@@ -7,24 +7,26 @@ const defaultArticle = {
   views: 1022,
   createdAt: '26.02.2022',
   userId: '1',
-  type: [
-    'ECONOMICS',
-  ],
+  type: ['ECONOMICS'],
   blocks: [],
 };
 
-export const createArticle = (article?: Article) => cy.request({
-  method: 'POST',
-  url: 'http://localhost:8000/articles',
-  headers: { Authorization: 'adsad' },
-  body: article ?? defaultArticle,
-}).then((response) => response.body);
+export const createArticle = (article?: Article) =>
+  cy
+    .request({
+      method: 'POST',
+      url: 'http://localhost:8000/articles',
+      headers: { Authorization: 'adsad' },
+      body: article ?? defaultArticle,
+    })
+    .then((response) => response.body);
 
-export const removeArticle = (articleId: string) => cy.request({
-  method: 'DELETE',
-  url: `http://localhost:8000/articles${articleId}`,
-  headers: { Authorization: 'adsad' },
-});
+export const removeArticle = (articleId: string) =>
+  cy.request({
+    method: 'DELETE',
+    url: `http://localhost:8000/articles${articleId}`,
+    headers: { Authorization: 'adsad' },
+  });
 
 declare global {
   namespace Cypress {

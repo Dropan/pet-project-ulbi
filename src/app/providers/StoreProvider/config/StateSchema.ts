@@ -1,5 +1,9 @@
 import {
-  AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
+  AnyAction,
+  CombinedState,
+  EnhancedStore,
+  Reducer,
+  ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
 import { ArticleDetailsSchema } from '@/entities/Article';
@@ -9,9 +13,7 @@ import { LoginSchema } from '@/features/AuthByUserName';
 import { UISchema } from '@/features/UI';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { ProfileSchema } from '@/features/editableProfileCard';
-import {
-  ArticleDetailsPageSchema,
-} from '@/pages/ArticleDetailsPage';
+import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 import { rtkApi } from '@/shared/api/rtkApi';
 
@@ -19,7 +21,7 @@ export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
   ui: UISchema;
-  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>;
 
   // Async reducers
   loginForm?: LoginSchema;
@@ -47,7 +49,7 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 }
 
 export interface ThunkExtraAgr {
-  api: AxiosInstance,
+  api: AxiosInstance;
 }
 
 export interface ThunkConfig<T> {

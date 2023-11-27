@@ -10,7 +10,10 @@ import {
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { HStack } from '@/shared/ui/Stack';
-import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/AddCommentFormSlice';
+import {
+  addCommentFormActions,
+  addCommentFormReducer,
+} from '../../model/slices/AddCommentFormSlice';
 import {
   getAddCommentFormError,
   getAddCommentFormText,
@@ -33,9 +36,12 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
   const text = useSelector(getAddCommentFormText);
   const error = useSelector(getAddCommentFormError);
 
-  const onCommentTextChange = useCallback((value: string) => {
-    dispatch(addCommentFormActions.setText(value));
-  }, [dispatch]);
+  const onCommentTextChange = useCallback(
+    (value: string) => {
+      dispatch(addCommentFormActions.setText(value));
+    },
+    [dispatch],
+  );
 
   const onSendHandler = useCallback(() => {
     onSendComment(text || '');
