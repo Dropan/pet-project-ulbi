@@ -1,4 +1,8 @@
 {
   "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
-  "files.eol": "\n"
+  "files.eol": "\n",
+  "cSpell.words": [
+    "inited",
+    "rightbar"
+  ]
 }

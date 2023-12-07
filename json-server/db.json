@@ -689,7 +689,8 @@
       "roles": ["ADMIN"],
       "features": {
         "isArticleRatingEnabled": true,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesigned": true
       },
       "jsonSettings": {
         "theme": "app_dark_theme",
