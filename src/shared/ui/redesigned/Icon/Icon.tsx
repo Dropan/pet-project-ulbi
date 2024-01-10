@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Icon.module.scss';
 
@@ -20,8 +20,15 @@ interface ClickableIconProps extends IconBaseProps {
 
 type IconProps = NonClickableIconProps | ClickableIconProps;
 
-export const Icon = (props: IconProps) => {
-  const { className, Svg, width = 32, height = 32, clickable, ...otherProps } = props;
+export const Icon = memo((props: IconProps) => {
+  const {
+    className,
+    Svg,
+    width = 32,
+    height = 32,
+    clickable,
+    ...otherProps
+  } = props;
 
   const icon = (
     <Svg
@@ -30,8 +37,8 @@ export const Icon = (props: IconProps) => {
       ])}
       width={width} 
       height={height}
-      onClick={undefined}
       {...otherProps}
+      onClick={undefined}
     />
   )
 
@@ -49,4 +56,4 @@ export const Icon = (props: IconProps) => {
   }
 
   return icon;
-};
+});

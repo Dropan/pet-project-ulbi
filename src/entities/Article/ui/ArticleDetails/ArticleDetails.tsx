@@ -26,7 +26,7 @@ import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleC
 import { ArticleBlockType } from '../../model/consts/articleConsts';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
-import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import { HStack, VStack } from '@/shared/ui/redesigned/Stack';
 import { Icon } from '@/shared/ui/deprecated/Icon';
 
 interface ArticleDetailsProps {

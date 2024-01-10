@@ -47,10 +47,6 @@ const gapClasses: Record<FlexGap, string> = {
   32: cls.gap32,
 };
 
-/**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
 export const Flex = (props: FlexProps) => {
   const {
     className,

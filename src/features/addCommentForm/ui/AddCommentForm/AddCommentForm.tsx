@@ -17,7 +17,7 @@ import {
   getAddCommentFormText,
 } from '../../model/selectors/AddCommentFormSelectors';
 import cls from './AddCommentForm.module.scss';
-import { HStack } from '@/shared/ui/deprecated/Stack';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 import { Input } from '@/shared/ui/deprecated/Input';
 
 export interface AddCommentFormProps {

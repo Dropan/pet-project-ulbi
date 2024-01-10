@@ -7,7 +7,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { getArticleDetailsData } from '@/entities/Article';
 import { getCanEditArticle } from '../../model/selectors/article';
 import { getRouteArticles, getRouteArticlesEdit } from '@/shared/const/router';
-import { HStack } from '@/shared/ui/deprecated/Stack';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 
 interface ArticleDetailsPageHeaderProps {
   className?: string;
