@@ -7,8 +7,10 @@ import { SortOrder } from "@/shared/types/sort";
 import { Card } from "@/shared/ui/redesigned/Card";
 import { VStack } from "@/shared/ui/redesigned/Stack";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import cls from "./ArticlesFilters.modules.scss";
+import cls from "./ArticlesFilters.module.scss";
 import { Input } from "@/shared/ui/redesigned/Input";
+import SearchIcon from '@/shared/assets/icons/search.svg';
+import { Icon } from "@/shared/ui/redesigned/Icon";
 
 interface ArticlesFiltersProps {
   className?: string;
@@ -43,17 +45,18 @@ export const ArticlesFilters = memo((props: ArticlesFiltersProps) => {
           placeholder={t('Поиск')}
           value={search}
           onChange={onChangeSearch}
+          addonLeft={<Icon Svg={SearchIcon} />}
+        />
+        <ArticleTypeTabs
+          value={type}
+          onChangeType={onChangeType}
+          // className={cls.tabs}
         />
         <ArticleSortSelector
           order={order}
           sort={sort}
           onChangeOrder={onChangeOrder}
           onChangeSort={onChangeSort}
-        />
-        <ArticleTypeTabs
-          value={type}
-          onChangeType={onChangeType}
-          // className={cls.tabs}
         />
       </VStack>
     </Card>
