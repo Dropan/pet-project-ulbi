@@ -1,5 +1,14 @@
+/* stylelint-disable max-line-length */
+/* stylelint-disable number-max-precision */
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
 .appLogoWrapper {
   position: relative;
+}
+
+.appLogo {
+  position: relative;
+  z-index: 100;
 }
 
 .gradientBig {
