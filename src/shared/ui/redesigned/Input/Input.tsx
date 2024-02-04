@@ -92,15 +92,15 @@ export const Input = memo((props: InputProps) => {
       />
       <div className={cls.addonRight}>{addonRight}</div>
     </div>
-  )
+  );
 
   if (label) {
     return (
-    <HStack max gap='8'>
-      <Text text={label} />
-      {input}
-    </HStack>
-    )
+      <HStack max gap="8">
+        <Text text={label} />
+        {input}
+      </HStack>
+    );
   }
 
   return input;

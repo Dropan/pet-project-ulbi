@@ -1,6 +1,6 @@
-import React, { memo } from "react";
-import { ArticlesFilters } from "@/widgets/ArticlesFilters";
-import { useArticleFilters } from "../../lib/hooks/useArticleFilters";
+import React, { memo } from 'react';
+import { ArticlesFilters } from '@/widgets/ArticlesFilters';
+import { useArticleFilters } from '../../lib/hooks/useArticleFilters';
 
 interface FiltersContainerProps {
   className?: string;
@@ -16,7 +16,7 @@ export const FiltersContainer = memo((props: FiltersContainerProps) => {
     order,
     search,
     sort,
-    type
+    type,
   } = useArticleFilters();
 
   return (
@@ -31,5 +31,5 @@ export const FiltersContainer = memo((props: FiltersContainerProps) => {
       sort={sort}
       type={type}
     />
-  )
-})
+  );
+});

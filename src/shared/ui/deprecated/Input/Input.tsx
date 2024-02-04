@@ -22,9 +22,9 @@ interface InputProps extends HTMLInputProps {
 }
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export const Input = memo((props: InputProps) => {
   const {
     className,

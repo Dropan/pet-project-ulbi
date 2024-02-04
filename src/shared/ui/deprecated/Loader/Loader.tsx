@@ -6,9 +6,9 @@ interface LoaderProps {
 }
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export const Loader = ({ className }: LoaderProps) => (
   <div className={classNames('lds-ellipsis', {}, [className])}>
     <div />

@@ -14,17 +14,11 @@ interface TabsProps {
   tabs: TabItem[];
   value: string;
   onTabClick: (tab: TabItem) => void;
-  direction?: FlexDirection;  
+  direction?: FlexDirection;
 }
 
 export const Tabs = (props: TabsProps) => {
-  const {
-    className,
-    tabs,
-    value,
-    onTabClick,
-    direction = 'row',
-  } = props;
+  const { className, tabs, value, onTabClick, direction = 'row' } = props;
 
   const clickHandler = useCallback(
     (tab: TabItem) => () => {
@@ -36,8 +30,8 @@ export const Tabs = (props: TabsProps) => {
   return (
     <Flex
       direction={direction}
-      gap='8'
-      align='start'
+      gap="8"
+      align="start"
       className={classNames(cls.Tabs, {}, [className])}
     >
       {tabs.map((tab) => {
@@ -47,14 +41,14 @@ export const Tabs = (props: TabsProps) => {
           <Card
             variant={isSelected ? 'light' : 'normal'}
             key={tab.value}
-            className={classNames(cls.tab, {[cls.selected]: isSelected})}
+            className={classNames(cls.tab, { [cls.selected]: isSelected })}
             onClick={clickHandler(tab)}
-            border='round'
+            border="round"
           >
             {tab.content}
           </Card>
-        )  
-    })}
+        );
+      })}
     </Flex>
   );
 };

@@ -7,7 +7,7 @@ import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popup.module.scss';
 import { Button } from '../../../Button';
 import { HStack } from '@/shared/ui/redesigned/Stack';
-import ArrowButton from "@/shared/assets/icons/arrow-bottom.svg";
+import ArrowButton from '@/shared/assets/icons/arrow-bottom.svg';
 import { Icon } from '../../../Icon';
 
 export interface ListBoxItem<T extends string> {
@@ -41,7 +41,10 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
 
   const optionsClasses = [mapDirectionClass[direction], popupCls.menu];
 
-  const selectedItem = useMemo(() => items?.find(item => item.value === value), [items, value]);
+  const selectedItem = useMemo(
+    () => items?.find((item) => item.value === value),
+    [items, value],
+  );
 
   return (
     <HStack gap="4">
@@ -55,7 +58,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
       >
         <HListBox.Button disabled={readonly} className={cls.trigger}>
           <Button
-            variant='filled'
+            variant="filled"
             disabled={readonly}
             addonRight={<Icon Svg={ArrowButton} />}
           >

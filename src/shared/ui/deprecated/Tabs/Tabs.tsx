@@ -16,9 +16,9 @@ interface TabsProps {
 }
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export const Tabs = (props: TabsProps) => {
   const { className, tabs, value, onTabClick } = props;
 

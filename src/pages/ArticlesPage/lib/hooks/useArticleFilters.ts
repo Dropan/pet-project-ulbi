@@ -1,18 +1,18 @@
-import { useSelector } from "react-redux";
-import { useCallback } from "react";
+import { useSelector } from 'react-redux';
+import { useCallback } from 'react';
 import {
   getArticlesPageOrder,
   getArticlesPageSearch,
   getArticlesPageSort,
   getArticlesPageType,
-  getArticlesPageView
-} from "../../model/selectors/articlesPageSelectors";
-import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
-import { useDebounce } from "@/shared/lib/hooks/useDebounce/useDebounce";
-import { ArticleSortField, ArticleType, ArticleView } from "@/entities/Article";
-import { articlesPageActions } from "../../model/slices/articlesPageSlice";
-import { SortOrder } from "@/shared/types/sort";
+  getArticlesPageView,
+} from '../../model/selectors/articlesPageSelectors';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
+import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
+import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
+import { articlesPageActions } from '../../model/slices/articlesPageSlice';
+import { SortOrder } from '@/shared/types/sort';
 
 export function useArticleFilters() {
   const view = useSelector(getArticlesPageView);
@@ -28,7 +28,7 @@ export function useArticleFilters() {
   }, [dispatch]);
 
   const debounceFetchData = useDebounce(fetchData, 500);
-  
+
   const onChangeView = useCallback(
     (view: ArticleView) => {
       dispatch(articlesPageActions.setView(view));
@@ -83,5 +83,5 @@ export function useArticleFilters() {
     onChangeSort,
     onChangeSearch,
     onChangeType,
-  }
+  };
 }

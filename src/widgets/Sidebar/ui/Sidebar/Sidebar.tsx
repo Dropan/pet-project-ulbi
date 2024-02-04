@@ -23,9 +23,9 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
   const onToggle = () => setCollapsed((prev) => !prev);
 
   return (
-    <ToggleFeatures 
-      feature='isAppRedesigned'
-      off={(
+    <ToggleFeatures
+      feature="isAppRedesigned"
+      off={
         <aside
           data-testid="sidebar"
           className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
@@ -48,13 +48,15 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             <LangSwitcher short={collapsed} className={cls.lang} />
           </div>
         </aside>
-      )}
-      on={(
+      }
+      on={
         <aside
           data-testid="sidebar"
-          className={classNames(cls.SidebarRedesigned, { [cls.collapsedRedesigned]: collapsed }, [
-            className,
-          ])}
+          className={classNames(
+            cls.SidebarRedesigned,
+            { [cls.collapsedRedesigned]: collapsed },
+            [className],
+          )}
         >
           <AppLogo size={collapsed ? 30 : 50} className={cls.appLogo} />
           <VStack role="navigation" gap="8" className={cls.items}>
@@ -68,13 +70,13 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             className={cls.collapseBtn}
             Svg={ArrowIcon}
             clickable
-           />
-           <div className={cls.switchers}>
+          />
+          <div className={cls.switchers}>
             <ThemeSwitcher />
             <LangSwitcher short={collapsed} className={cls.lang} />
           </div>
         </aside>
-      )}
+      }
     />
-  )
+  );
 });

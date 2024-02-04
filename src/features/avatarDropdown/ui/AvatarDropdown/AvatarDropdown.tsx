@@ -59,35 +59,29 @@ export const AvatarDropdown = (props: AvatarDropdownProps) => {
 
   return (
     <ToggleFeatures
-      feature='isAppRedesigned'
-      on={(
+      feature="isAppRedesigned"
+      on={
         <Dropdown
           className={classNames('', {}, [className])}
           direction="bottom left"
           items={items}
-          trigger={(
-            <Avatar
-              size={40}
-              src={authData.avatar}
-            />
-          )}
+          trigger={<Avatar size={40} src={authData.avatar} />}
         />
-      )}
-      off={(
+      }
+      off={
         <DropdownDeprecated
           className={classNames('', {}, [className])}
           direction="bottom left"
           items={items}
-          trigger={(
+          trigger={
             <AvatarDeprecated
-              fallbackInverted 
+              fallbackInverted
               size={30}
               src={authData.avatar}
             />
-          )}
+          }
         />
-      )}
+      }
     />
-    
   );
 };

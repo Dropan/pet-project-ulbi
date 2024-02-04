@@ -39,9 +39,9 @@ const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
 };
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export const Text = memo((props: TextProps) => {
   const {
     className,

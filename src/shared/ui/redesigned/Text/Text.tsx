@@ -4,7 +4,7 @@ import cls from './Text.module.scss';
 
 export type TextVariant = 'primary' | 'error' | 'accent';
 
-export type TextAlign = 'right' |'left' |'center';
+export type TextAlign = 'right' | 'left' | 'center';
 
 export type TextSize = 's' | 'm' | 'l';
 
@@ -46,12 +46,7 @@ export const Text = memo((props: TextProps) => {
   const HeaderTag = mapSizeToHeaderTag[size];
   const sizeClass = mapSizeToClass[size];
 
-  const additionalClasses = [
-    className,
-    cls[variant],
-    cls[align],
-    sizeClass
-  ];
+  const additionalClasses = [className, cls[variant], cls[align], sizeClass];
 
   return (
     <div className={classNames(cls.Text, {}, additionalClasses)}>

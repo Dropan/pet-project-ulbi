@@ -24,13 +24,7 @@ export const Avatar = (props: AvatarProps) => {
     [size],
   );
 
-  const errorFallback = (
-    <Icon
-      width={size}
-      height={size}
-      Svg={UserIcon}
-    />
-  );
+  const errorFallback = <Icon width={size} height={size} Svg={UserIcon} />;
 
   const fallback = <Skeleton width={size} height={size} border="50%" />;
 

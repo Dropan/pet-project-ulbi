@@ -10,9 +10,9 @@ interface CodeProps {
 }
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export const Code = memo((props: CodeProps) => {
   const { className, text } = props;
 

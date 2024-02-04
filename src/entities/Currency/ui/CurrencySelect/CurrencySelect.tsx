@@ -36,14 +36,14 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
     defaultValue: t('Укажите валюту'),
     label: t('Укажите валюту'),
     onChange: onChangeHandler,
-    direction: "top right" as const
-  }
+    direction: 'top right' as const,
+  };
 
   return (
     <ToggleFeatures
-      feature='isAppRedesigned'
+      feature="isAppRedesigned"
       on={<ListBox {...listBoxProps} />}
-      off={<ListBoxDeprecated {...listBoxProps}/>}
+      off={<ListBoxDeprecated {...listBoxProps} />}
     />
   );
 });

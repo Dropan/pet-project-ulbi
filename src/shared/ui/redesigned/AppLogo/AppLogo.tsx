@@ -5,23 +5,18 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { HStack } from '../../redesigned/Stack';
 
 interface AppLogoProps {
-    className?: string;
-    size?: number;
+  className?: string;
+  size?: number;
 }
 
 export const AppLogo = memo(({ className, size = 50 }: AppLogoProps) => (
   <HStack
-      max
-      justify="center"
-      className={classNames(cls.appLogoWrapper, {}, [className])}
+    max
+    justify="center"
+    className={classNames(cls.appLogoWrapper, {}, [className])}
   >
-    <AppSvg 
-        className={cls.appLogo}
-        width={size}
-        height={size}
-        color='black'
-      />
-      <div className={cls.gradientBig} />
-      <div className={cls.gradientSmall} />
+    <AppSvg className={cls.appLogo} width={size} height={size} color="black" />
+    <div className={cls.gradientBig} />
+    <div className={cls.gradientSmall} />
   </HStack>
 ));

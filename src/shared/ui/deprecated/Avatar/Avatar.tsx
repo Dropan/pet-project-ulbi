@@ -15,9 +15,9 @@ interface AvatarProps {
 }
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export const Avatar = (props: AvatarProps) => {
   const { className, src, alt, size = 100, fallbackInverted } = props;
   const mods: Mods = {};

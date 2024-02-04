@@ -38,12 +38,12 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
     defaultValue: t('Укажите страну'),
     label: t('Укажите страну'),
     items: options,
-    direction: "top right" as const
-  }
+    direction: 'top right' as const,
+  };
 
   return (
     <ToggleFeatures
-      feature='isAppRedesigned'
+      feature="isAppRedesigned"
       on={<ListBox {...listBoxProps} />}
       off={<ListBoxDeprecated {...listBoxProps} />}
     />

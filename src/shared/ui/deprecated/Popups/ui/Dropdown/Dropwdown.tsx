@@ -22,9 +22,9 @@ interface DropdownProps {
 }
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export function Dropdown(props: DropdownProps) {
   const { className, trigger, items, direction = 'bottom right' } = props;
 

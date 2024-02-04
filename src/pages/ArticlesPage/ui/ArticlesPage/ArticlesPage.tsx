@@ -43,24 +43,26 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
   const content = (
     <ToggleFeatures
-      feature='isAppRedesigned'
-      on={(
+      feature="isAppRedesigned"
+      on={
         <StickyContentLayout
           left={<ViewSelectorContainer />}
           right={<FiltersContainer />}
-          content={(
+          content={
             <Page
               data-testid="ArticlesPage"
               onScrollEnd={onLoadNextPart}
-              className={classNames(cls.ArticlesPageRedesigned, {}, [className])}
+              className={classNames(cls.ArticlesPageRedesigned, {}, [
+                className,
+              ])}
             >
               <ArticleInfiniteList className={cls.list} />
               <ArticlePageGreeting />
             </Page>
-          )}
+          }
         />
-      )}
-      off={(
+      }
+      off={
         <Page
           data-testid="ArticlesPage"
           onScrollEnd={onLoadNextPart}
@@ -70,14 +72,12 @@ const ArticlesPage = (props: ArticlesPageProps) => {
           <ArticleInfiniteList className={cls.list} />
           <ArticlePageGreeting />
         </Page>
-      )}
+      }
     />
-  )
+  );
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
-      {content}
-    </DynamicModuleLoader>
+    <DynamicModuleLoader reducers={reducers}>{content}</DynamicModuleLoader>
   );
 };
 

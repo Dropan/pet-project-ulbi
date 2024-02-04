@@ -20,9 +20,9 @@ interface DrawerProps {
 const height = window.innerHeight - 100;
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export const DrawerContent = memo((props: DrawerProps) => {
   const { clasName, children, isOpen, onClose, lazy } = props;
 
@@ -109,9 +109,9 @@ const DrawerAsync = (props: DrawerProps) => {
 };
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export const Drawer = (props: DrawerProps) => (
   <AnimationProvider>
     <DrawerAsync {...props} />

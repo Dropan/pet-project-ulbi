@@ -12,9 +12,9 @@ export enum ButtonTheme {
 }
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export enum ButtonSize {
   M = 'size_m',
   L = 'size_l',

@@ -1,5 +1,5 @@
-import { ReactElement, memo } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
+import { ReactElement, memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './MainLayout.module.scss';
 
 interface MainLayoutProps {
@@ -11,13 +11,7 @@ interface MainLayoutProps {
 }
 
 export const MainLayout = memo((props: MainLayoutProps) => {
-  const {
-    className,
-    content,
-    header,
-    sidebar,
-    toolbar,
-  } = props;
+  const { className, content, header, sidebar, toolbar } = props;
 
   return (
     <div className={classNames(cls.MainLayout, {}, [className])}>
@@ -28,5 +22,5 @@ export const MainLayout = memo((props: MainLayoutProps) => {
         <div className={cls.toolbar}>{toolbar}</div>
       </div>
     </div>
-  )
-})
+  );
+});

@@ -15,9 +15,9 @@ interface AppLinkProps extends LinkProps {
 }
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export const AppLink = memo((props: AppLinkProps) => {
   const {
     to,

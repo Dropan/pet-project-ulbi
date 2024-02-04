@@ -10,9 +10,9 @@ interface SkeletonProps {
 }
 
 /**
-* Устарел, используем новые из папки redesigned
-* @deprecated
-*/
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export const Skeleton = memo((props: SkeletonProps) => {
   const { className, height, width, border } = props;
 

@@ -1,4 +1,4 @@
-import { FeatureFlags } from "@/shared/types/featureFlags";
+import { FeatureFlags } from '@/shared/types/featureFlags';
 
 // Фичи в ходе сессии не меняются, их необязательно делать реактивными
 let featureFlags: FeatureFlags = {};

@@ -5,12 +5,12 @@ import { ToggleFeatures } from '@/shared/lib/features';
 import {
   ProfileCardDeprecated,
   ProfileCardDeprecatedError,
-  ProfileCardDeprecatedLoader
+  ProfileCardDeprecatedLoader,
 } from './ProfileCardDeprecated/ProfileCardDeprecated';
 import {
   ProfileCardRedesigned,
   ProfileCardRedesignedError,
-  ProfileCardRedesignedSkeleton
+  ProfileCardRedesignedSkeleton,
 } from './ProfileCardRedesigned/ProfileCardRedesigned';
 
 export interface ProfileCardProps {
@@ -35,7 +35,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
   if (isLoading) {
     return (
       <ToggleFeatures
-        feature='isAppRedesigned'
+        feature="isAppRedesigned"
         on={<ProfileCardRedesignedSkeleton />}
         off={<ProfileCardDeprecatedLoader />}
       />
@@ -45,7 +45,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
   if (error) {
     return (
       <ToggleFeatures
-        feature='isAppRedesigned'
+        feature="isAppRedesigned"
         on={<ProfileCardRedesignedError />}
         off={<ProfileCardDeprecatedError />}
       />
@@ -54,7 +54,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   return (
     <ToggleFeatures
-      feature='isAppRedesigned'
+      feature="isAppRedesigned"
       on={<ProfileCardRedesigned {...props} />}
       off={<ProfileCardDeprecated {...props} />}
     />

@@ -21,13 +21,13 @@ const App = () => {
   }, [dispatch]);
 
   if (!inited) {
-    return <PageLoader />
+    return <PageLoader />;
   }
 
   return (
     <ToggleFeatures
-      feature='isAppRedesigned'
-      on={(
+      feature="isAppRedesigned"
+      on={
         <div className={classNames('app_redesigned', {}, [theme])}>
           <Suspense fallback="">
             <MainLayout
@@ -37,18 +37,18 @@ const App = () => {
             />
           </Suspense>
         </div>
-      )}
-      off={(
+      }
+      off={
         <div className={classNames('app', {}, [theme])}>
           <Suspense fallback="">
             <Navbar />
             <div className="content-page">
-              <Sidebar /> 
+              <Sidebar />
               {inited && <AppRouter />}
             </div>
           </Suspense>
         </div>
-      )}
+      }
     />
   );
 };
