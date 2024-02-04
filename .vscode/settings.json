@@ -1,6 +1,13 @@
 {
   "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
   "files.eol": "\n",
-  "cSpell.words": ["inited", "rightbar", "stylelint", "testid", "ulbi"],
+  "cSpell.words": [
+    "consts",
+    "inited",
+    "rightbar",
+    "stylelint",
+    "testid",
+    "ulbi"
+  ],
   "cSpell.language": "en,ru"
 }
