@@ -11,13 +11,15 @@ module.exports = {
     'plugin:storybook/recommended',
     'prettier',
   ],
-  overrides: [{
-    files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
-    rules: {
-      'i18next/no-literal-string': 'off',
-      'max-len': 'off',
+  overrides: [
+    {
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+        'max-len': 'off',
+      },
     },
-  }],
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
@@ -33,9 +35,12 @@ module.exports = {
   ],
   rules: {
     'unused-imports/no-unused-imports': 'error',
-    'react/jsx-filename-extension': [2, {
-      extensions: ['.js', '.jsx', 'tsx'],
-    }],
+    'react/jsx-filename-extension': [
+      2,
+      {
+        extensions: ['.js', '.jsx', 'tsx'],
+      },
+    ],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     // 'no-unused-var': 'off',
@@ -50,29 +55,36 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'warn',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error', {
-      markupOnly: true,
-      ignoreAttribute: [
-        'as',
-        'role',
-        'data-testid',
-        'to',
-        'target',
-        'justify',
-        'align',
-        'direction',
-        'gap',
-        'border',
-        'feature',
-        'color',
-        'variant',
-        'size'
-      ],
-    }],
-    'max-len': ['error', {
-      ignoreComments: true,
-      code: 125,
-    }],
+    'i18next/no-literal-string': [
+      'error',
+      {
+        markupOnly: true,
+        ignoreAttribute: [
+          'as',
+          'role',
+          'data-testid',
+          'to',
+          'target',
+          'justify',
+          'align',
+          'direction',
+          'gap',
+          'border',
+          'feature',
+          'color',
+          'variant',
+          'size',
+          'wrap',
+        ],
+      },
+    ],
+    'max-len': [
+      'error',
+      {
+        ignoreComments: true,
+        code: 125,
+      },
+    ],
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'react-hooks/rules-of-hooks': 'error',
@@ -92,11 +104,15 @@ module.exports = {
       'error',
       {
         alias: '@',
-        testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+        testFilesPatterns: [
+          '**/*.test.*',
+          '**/*.story.*',
+          '**/StoreDecorator.tsx',
+        ],
       },
     ],
     'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
-    'react/no-unstable-nested-components': 'warn'
+    'react/no-unstable-nested-components': 'warn',
   },
   globals: {
     __IS_DEV__: true,
