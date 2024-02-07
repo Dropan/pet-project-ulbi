@@ -9,7 +9,11 @@ import {
   isUserManager,
   userActions,
 } from '@/entities/User';
-import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
+import {
+  getRouteAdminPanel,
+  getRouteProfile,
+  getRouteSettings,
+} from '@/shared/const/router';
 import { Dropdown as DropdownDeprecated } from '@/shared/ui/deprecated/Popups';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { Dropdown } from '@/shared/ui/redesigned/Popups';
@@ -42,6 +46,10 @@ export const AvatarDropdown = (props: AvatarDropdownProps) => {
     {
       content: t('Выйти'),
       onClick: onLogOut,
+    },
+    {
+      content: t('Настройки пользователя'),
+      href: getRouteSettings(),
     },
     {
       content: t('Профиль пользователя'),
