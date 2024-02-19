@@ -11,10 +11,6 @@ export enum ButtonTheme {
   BACKGROUND_INVERTED = 'backgroundInverted',
 }
 
-/**
- * Устарел, используем новые из папки redesigned
- * @deprecated
- */
 export enum ButtonSize {
   M = 'size_m',
   L = 'size_l',
@@ -49,6 +45,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   fullWidth?: boolean;
 }
 
+/**
+ * Устарел, используем новые из папки redesigned
+ * @deprecated
+ */
 export const Button = memo((props: ButtonProps) => {
   const {
     className,
