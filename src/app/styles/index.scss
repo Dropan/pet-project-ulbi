@@ -33,11 +33,26 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--card-bg); // Цвет дорожки
+  background: var(--light-bg-redesigned); // Цвет дорожки
 }
 
 *::-webkit-scrollbar-thumb {
+  background-color: var(--icon-redesigned); // Цвет плашки
+  border-radius: 20px; // Закругление плашки
+  border: 1px solid var(--accent-redesigned); // padding вокруг плашки
+}
+
+.app *::-webkit-scrollbar {
+  width: 12px; // Ширина скроллбара
+  height: 8px; // Высота скроллбара
+}
+
+.app *::-webkit-scrollbar-track {
+  background: var(--card-bg); // Цвет дорожки
+}
+
+.app *::-webkit-scrollbar-thumb {
   background-color: var(--inverted-primary-color); // Цвет плашки
-  border-radius: 20px; // Загругление плашки
+  border-radius: 20px; // Закругление плашки
   border: 2px solid var(--primary-color); // padding вокруг плашки
 }

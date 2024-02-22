@@ -8,7 +8,7 @@
     align-items: center;
   }
 
-  .userName {
+  .username {
     margin-left: 8px;
   }
 
@@ -81,8 +81,8 @@
   .types p {
     width: 115px;
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .views {
@@ -97,10 +97,12 @@
   .title p {
     width: 200px;
     white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
+
+
 
 .ArticleListItemRedesigned {
   &.BIG {
@@ -108,7 +110,9 @@
   }
 
   &.SMALL {
-    width: 240px;
-    height: 350px;
+    .card {
+      height: 350px;
+      width: 240px;
+    }
   }
 }
