@@ -13,7 +13,6 @@ const fallbackTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme;
 
 export const ThemeProvider = (props: ThemeProviderProps) => {
   const { children, initialTheme } = props;
-  const { theme: defaultTheme } = useJsonSettings();
   const [isThemeInited, setThemeInited] = useState(false);
 
   const [theme, setTheme] = useState<Theme>(
@@ -21,11 +20,11 @@ export const ThemeProvider = (props: ThemeProviderProps) => {
   );
 
   useEffect(() => {
-    if (!isThemeInited && defaultTheme) {
-      setTheme(defaultTheme);
+    if (!isThemeInited && initialTheme) {
+      setTheme(initialTheme);
       setThemeInited(true);
     }
-  }, [defaultTheme, isThemeInited]);
+  }, [initialTheme, isThemeInited]);
 
   useEffect(() => {
     document.body.className = theme;
